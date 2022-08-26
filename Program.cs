@@ -1,4 +1,4 @@
-﻿using EasyLog;
+﻿using EasyLogPlus;
 
 namespace source2tools_drpc; 
 
@@ -9,6 +9,7 @@ internal class Source2ToolsDrpcMain {
     private static void SetConfig() {
         cfg.ShowDate = true;
         cfg.Console = true;
+        cfg.UseColon = true;
     }
 
     private static void Main(string[] args) {

@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Easy-Log" Version="1.0.5" />
+        <PackageReference Include="EasyLogPlus" Version="1.0.6-pre2" />
         <PackageReference Include="NetDiscordRpc" Version="1.0.2" />
     </ItemGroup>
 

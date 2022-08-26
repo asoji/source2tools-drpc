@@ -10,11 +10,10 @@ internal class Source2ToolsDrpcProcessCheck {
             var Source2Tools = Source2ToolsName.SelectMany(name => Process.GetProcessesByName(name)).ToArray();
 
             var processes = Process.GetProcesses();
-
             switch (Source2Tools.Length) {
                 case 0:
                     DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools not running!");
-                    Source2ToolsDrpcMain.log.Error("None of the Source 2 Hammer tools detected!");
+                    Source2ToolsDrpcMain.log.Error("None of the Source 2 Tools detected!");
                     Thread.Sleep(1000);
                     break;
                 case 1:
@@ -23,7 +22,7 @@ internal class Source2ToolsDrpcProcessCheck {
                     Thread.Sleep(1000);
                     break;
                 default:
-                    Console.WriteLine("What the fuck did you do?");
+                    Source2ToolsDrpcMain.log.Critical("What the fuck did you do...?");
                     Environment.Exit(0);
                     break;
             }

@@ -5,8 +5,8 @@ namespace source2tools_drpc;
 internal class Source2ToolsDrpcProcessCheck {
     public static void ProcessCheck() {
         for (var i = 0;; i--) {
-            var Source2ToolsName = new[] { /*"csgocfg",*/ "dota2cfg", "hlvrcfg", "steamtourscfg" }; // one can wish
-            // for CS:GO Source 2
+            var Source2ToolsName = new[] { /*"cs2cfg",*/ "dota2cfg", "hlvrcfg", "steamtourscfg" };
+            // Counter Strike Source 2 is real boooooois! :D
             var Source2Tools = Source2ToolsName.SelectMany(name => Process.GetProcessesByName(name)).ToArray();
 
             var processes = Process.GetProcesses();

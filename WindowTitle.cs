@@ -7,4 +7,6 @@ public class WindowTitle {
     public const string MATERIAL_EDITOR_WINDOW_TITLE = "Material Editor";
     public const string MODEL_EDITOR_WINDOW_TITLE = "Model Editor";
     public const string WORKSHOP_MANAGER_TITLE = "Workshop Manager";
+    public const string MODELDOC_SELECTOR_WINDOW_TITLE = "Open ModelDoc File";
+    public const string MODELDOC_EDITOR_WINDOW_TITLE = "ModelDoc ::";
 }

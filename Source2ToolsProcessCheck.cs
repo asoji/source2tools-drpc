@@ -16,7 +16,7 @@ internal class Source2ToolsDrpcProcessCheck {
                     DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools not running!");
                     DiscordRichPresence.DiscordRpc.UpdateState("Tool not detected!");
                     Source2ToolsDrpcMain.log.Error("None of the Source 2 Tools detected!");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(100);
                     break;
                 case 1:
                     // DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools running!");
@@ -109,12 +109,26 @@ internal class Source2ToolsDrpcProcessCheck {
                         DiscordRichPresence.DiscordRpc.UpdateState("Getting content ready");
                     }
 
+                    if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_SELECTOR_WINDOW_TITLE)) {
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("noicon", "No high resolution enough icon exists for this tool");
+                        DiscordRichPresence.DiscordRpc.UpdateDetails("In ModelDoc Selection");
+                        DiscordRichPresence.DiscordRpc.UpdateState("they modeldoc on my poly til i gon");
+                    }
+
+                    if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_EDITOR_WINDOW_TITLE)) {
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("noicon", "No high resolution enough icon exists for this tool");
+                        DiscordRichPresence.DiscordRpc.UpdateDetails("Editing in ModelDoc");
+                        DiscordRichPresence.DiscordRpc.UpdateState(Source2Tools[0].MainWindowTitle.Remove(0, 11));
+                    }
+
                     if (!Source2Tools[0].MainWindowTitle.Contains(WindowTitle.HAMMER_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODEL_EDITOR_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.ASSETS_BROWSER_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MATERIAL_EDITOR_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.PREVIEW_WINDOW_TITLE) &&
-                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.WORKSHOP_MANAGER_TITLE)) {
+                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.WORKSHOP_MANAGER_TITLE) &&
+                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_SELECTOR_WINDOW_TITLE) &&
+                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_EDITOR_WINDOW_TITLE)) {
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools is running, but...");
                         DiscordRichPresence.DiscordRpc.UpdateState("current tool not implemented, oops.");
                     }

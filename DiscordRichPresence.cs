@@ -14,7 +14,8 @@ public class DiscordRichPresence {
         DiscordRpc.SetPresence(new RichPresence {
             Buttons = new Button[] {
                 new() { Label = "DRPC Git Repo", Url = "https://github.com/asoji/source2tools-drpc" }
-            }
+            },
+            Timestamps = Timestamps.Now
         });
 
         DiscordRpc.Invoke();

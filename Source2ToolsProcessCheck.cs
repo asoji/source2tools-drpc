@@ -121,6 +121,12 @@ internal class Source2ToolsDrpcProcessCheck {
                         DiscordRichPresence.DiscordRpc.UpdateState(Source2Tools[0].MainWindowTitle.Remove(0, 11));
                     }
 
+                    if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.POSTPROCESSING_EDITOR_WINDOW_TITLE)) {
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("noicon", "No high resolution enough icon exists for this tool");
+                        DiscordRichPresence.DiscordRpc.UpdateDetails("Editing in Postprocessing Editor");
+                        DiscordRichPresence.DiscordRpc.UpdateState("shaders go glare");
+                    }
+
                     if (!Source2Tools[0].MainWindowTitle.Contains(WindowTitle.HAMMER_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODEL_EDITOR_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.ASSETS_BROWSER_WINDOW_TITLE) &&
@@ -128,7 +134,8 @@ internal class Source2ToolsDrpcProcessCheck {
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.PREVIEW_WINDOW_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.WORKSHOP_MANAGER_TITLE) &&
                         !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_SELECTOR_WINDOW_TITLE) &&
-                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_EDITOR_WINDOW_TITLE)) {
+                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.MODELDOC_EDITOR_WINDOW_TITLE) &&
+                        !Source2Tools[0].MainWindowTitle.Contains(WindowTitle.POSTPROCESSING_EDITOR_WINDOW_TITLE)) {
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools is running, but...");
                         DiscordRichPresence.DiscordRpc.UpdateState("current tool not implemented, oops.");
                     }

@@ -1,6 +1,7 @@
 namespace source2tools_drpc;
 
 public class WindowTitle {
+    public const string WORKSHOP_TOOLS_WINDOW_TITLE = "Workshop Tools";
     public const string PREVIEW_WINDOW_TITLE = "SteamVR Home";
     public const string ASSETS_BROWSER_WINDOW_TITLE = "Asset Browser";
     public const string HAMMER_WINDOW_TITLE = "Hammer";

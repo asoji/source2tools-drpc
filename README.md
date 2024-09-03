@@ -27,7 +27,7 @@ How this implementation achieves it, and to a fault, is by grabbing the Window t
   - Material Editor*
   - ModelDoc
   - Particle Editor*
-  - Post Processing Editor
+  - Post Processing Editor*
   - Workshop Manager
 
 - Counter Strike 2
@@ -36,7 +36,7 @@ How this implementation achieves it, and to a fault, is by grabbing the Window t
   - Hammer
   - Material Editor*
   - ModelDoc
-  - Post Processing Editor
+  - Post Processing Editor*
   - Workshop Manager
  
 ## License

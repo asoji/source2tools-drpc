@@ -14,6 +14,7 @@ internal class Source2ToolsDrpcProcessCheck {
             switch (Source2Tools.Length) {
                 case 0:
                     DiscordRichPresence.DiscordRpc.UpdateDetails("Source 2 Tools not running!");
+                    DiscordRichPresence.DiscordRpc.UpdateState("Tool not detected!");
                     Source2ToolsDrpcMain.log.Error("None of the Source 2 Tools detected!");
                     Thread.Sleep(1000);
                     break;
@@ -24,35 +25,35 @@ internal class Source2ToolsDrpcProcessCheck {
                     Source2ToolsDrpcMain.log.Info($"Running Tool Process: {Source2Tools[0].ProcessName}");
 
                     if (Source2Tools[0].ProcessName == "steamtourscfg" || Source2Tools[0].ProcessName == "steamtours") {
-                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("steamtours");
+                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("steamtours");
                     }
 
                     if (Source2Tools[0].ProcessName == "cs2cfg" || Source2Tools[0].ProcessName == "cs2") {
-                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("cs2");
+                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("cs2");
                     }
 
                     if (Source2Tools[0].ProcessName == "hlvrcfg" || Source2Tools[0].ProcessName == "hlvr") {
-                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("hla");
+                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("hla");
                     }
 
                     if (Source2Tools[0].ProcessName == "dota2cfg" || Source2Tools[0].ProcessName == "dota2") {
-                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("dota2");
+                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("dota2");
                     }
 
                     if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.STEAMVR_PREVIEW_WINDOW_TITLE)) {
-                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("steamtourscfg");
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("steamtourscfg");
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Previewing in SteamVR's Game Window");
                         DiscordRichPresence.DiscordRpc.UpdateState("Looking around");
                     }
 
                     if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.STEAMVR_ASSETS_BROWSER_WINDOW_TITLE)) {
-                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("asset_browser");
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("asset_browser");
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Browsing the Asset Browser");
                         DiscordRichPresence.DiscordRpc.UpdateState("That's a lot of assets");
                     }
 
                     if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.STEAMVR_HAMMER_WINDOW_TITLE)) {
-                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("hammer_editor");
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("hammer_editor");
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Creating something in Hammer");
                         String StateText = Regex.Match(Source2Tools[0].MainWindowTitle, "\\[((.|\\n|\\r)*)\\]").Value;
                         DiscordRichPresence.DiscordRpc.UpdateState(
@@ -60,14 +61,14 @@ internal class Source2ToolsDrpcProcessCheck {
                     }
 
                     if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.STEAMVR_MODEL_EDITOR_WINDOW_TITLE)) {
-                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("model_browser");
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("model_browser");
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Editing in the Model Editor");
                         DiscordRichPresence.DiscordRpc.UpdateState("not yet implemented");
 
                     }
 
                     if (Source2Tools[0].MainWindowTitle.Contains(WindowTitle.STEAMVR_MATERIAL_EDITOR_WINDOW_TITLE)) {
-                        DiscordRichPresence.DiscordRpc.UpdateSmallAsset("material_editor");
+                        DiscordRichPresence.DiscordRpc.UpdateLargeAsset("material_editor");
                         DiscordRichPresence.DiscordRpc.UpdateDetails("Editing in the Material Editor");
                         DiscordRichPresence.DiscordRpc.UpdateState(Source2Tools[0].MainWindowTitle.Remove(0, 17)); // assume that the window title for this always starts with `Material Editor - ` and trim that
                     }

@@ -179,6 +179,21 @@ internal class Source2ToolsDrpcProcessCheck {
                 continue;
             }
 
+            if (ToolProcess.MainWindowTitle.Contains(WindowTitle.PARTICLE_EDITOR_WINDOW_TITLE) ||
+                ToolProcess.MainWindowTitle.Contains(WindowTitle.PARTICLE_EDITOR_FUCKIN_AAAAAAAAAAAA))
+            {
+                DiscordRichPresence.UpdateDetails("Tinkering inside the Particle Editor");
+                DiscordRichPresence.UpdateLargeAsset("particle_editor");
+                if (ToolProcess.MainWindowTitle == WindowTitle.PARTICLE_EDITOR_WINDOW_TITLE)
+                {
+                       DiscordRichPresence.UpdateState("No file loaded");
+                       continue;
+                }
+                string StateText = ToolProcess.MainWindowTitle.Replace(WindowTitle.PARTICLE_EDITOR_FUCKIN_AAAAAAAAAAAA, "");
+                DiscordRichPresence.UpdateState($"Editing {StateText}");
+                continue;
+            }
+
             // if (!ToolProcess.MainWindowTitle.Contains(WindowTitle.WORKSHOP_TOOLS_WINDOW_TITLE) &&
             //     !ToolProcess.MainWindowTitle.Contains(WindowTitle.HAMMER_WINDOW_TITLE) &&
             //     !ToolProcess.MainWindowTitle.Contains(WindowTitle.MODEL_EDITOR_WINDOW_TITLE) &&

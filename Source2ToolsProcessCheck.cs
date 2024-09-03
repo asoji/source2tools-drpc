@@ -101,7 +101,7 @@ internal class Source2ToolsDrpcProcessCheck {
                     //         DiscordRichPresence.DiscordRpc.UpdateState("current window isn't implemented. oops.");
                     //         break;
                     // }
-                    Thread.Sleep(1000);
+                    Thread.Sleep(5000);
                     break;
                 default:
                     Source2ToolsDrpcMain.log.Critical("What the fuck did you do...?");

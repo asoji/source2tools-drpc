@@ -1,7 +1,7 @@
 using NetDiscordRpc;
 using NetDiscordRpc.RPC;
 
-namespace source2tools_drpc; 
+namespace source2tools_drpc;
 
 public class DiscordRichPresence {
     public static DiscordRPC DiscordRpc;
@@ -12,7 +12,11 @@ public class DiscordRichPresence {
         DiscordRpc.Initialize();
 
         DiscordRpc.SetPresence(new RichPresence {
-            Details = "Source 2 Tools not running!"
+            Details = "Source 2 Tools not running!",
+            State = "Tool not detected!",
+            Buttons = new Button[] {
+                new() { Label = "DRPC Git Repo", Url = "https://github.com/asoji/source2tools-drpc" }
+            }
         });
 
         DiscordRpc.Invoke();

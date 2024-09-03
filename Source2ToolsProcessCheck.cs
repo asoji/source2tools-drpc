@@ -45,7 +45,7 @@ internal class Source2ToolsDrpcProcessCheck {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("steamtours");
                         }
 
-                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") { // WHY... IS CS2S TOOL WINDOW... CSGOCFG??? WOULDNT IT MAKE MORE SENSE TO BE CS2CFG...??????????????????
+                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("cs2");
                         }
 
@@ -66,7 +66,7 @@ internal class Source2ToolsDrpcProcessCheck {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("steamtours");
                         }
 
-                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") { // WHY... IS CS2S TOOL WINDOW... CSGOCFG??? WOULDNT IT MAKE MORE SENSE TO BE CS2CFG...??????????????????
+                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("cs2");
                         }
 
@@ -114,7 +114,7 @@ internal class Source2ToolsDrpcProcessCheck {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("steamtours");
                         }
 
-                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") { // WHY... IS CS2S TOOL WINDOW... CSGOCFG??? WOULDNT IT MAKE MORE SENSE TO BE CS2CFG...??????????????????
+                        if (Source2Tools[0].ProcessName == "csgocfg" || Source2Tools[0].ProcessName == "cs2") {
                             DiscordRichPresence.DiscordRpc.UpdateLargeAsset("cs2");
                         }
 

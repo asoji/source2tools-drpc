@@ -4,7 +4,8 @@ This is a rich presence console app that runs in the background, scanning for an
 
 ![image](https://github.com/user-attachments/assets/92114448-763e-46f4-8a96-d72b58e25811)
 ![image](https://github.com/user-attachments/assets/f1d8a675-9c9c-4e8c-8513-a25d4518f7a9)
-![image](https://github.com/user-attachments/assets/9be1b9a1-d222-4e80-a6eb-25163dab212f)
+![image](https://github.com/user-attachments/assets/0bf57105-cd1d-45c5-947b-ddac4d221034)
+
 
 
 How this implementation achieves it, and to a fault, is by grabbing the Window title, so some common scenarios end up not working either. Oh well.
